@@ -1,0 +1,102 @@
+*::-webkit-scrollbar{
+  width: 3px;
+  height: 3px;
+}
+*::-webkit-scrollbar-thumb{
+  background: #2f3640;
+  width: 5px;
+  border-radius: 5px;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+	background-image: linear-gradient(to bottom right, #16a085,#2980b9);
+	margin: 0;
+	padding: 0;
+}
+.contenedor{
+	background: #000000;
+	width: 280px;
+	height: 500px;
+	margin: 0;
+	padding: 0;
+	border-radius: 5px;
+	box-shadow: 0px 0px 9px #000;
+}
+.resultados{
+	border-radius: 5px 5px 0 0;
+	width: calc(100% - 20px);
+	height: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
+	background: #181818;
+	margin: 0;
+	padding: 0px 10px;
+	position: relative;
+}
+.operacion{
+	font-size: 50px;
+	width: 100%;
+	height: 65px;
+	margin: 0;
+	padding: 0;
+	color: #ADADAD;
+	border: none;
+	text-align: right;
+	background: none;
+	overflow-x: scroll;
+	overflow-y: none;
+	white-space: nowrap;
+	margin-bottom: 2px;
+	transition: 2s;
+}
+.operacion:focus{
+	outline: none;
+	border: none;
+}
+.eliminar{
+	border: none;
+	background: none;
+	font-size: 20px;
+	cursor: pointer;
+	color: #B20909;
+	padding: 10px;
+}
+.eliminar:hover{
+	color: white;
+}
+table{
+	width: 100%;
+	height: calc(100% - 42%);
+	margin: 0;
+	padding: 0;
+}
+table tr th input:active ~.operacion,table tr th button:active ~.operacion{
+	text-align: right;
+	float: left;
+}
+table tr th input,table tr th button{
+	background: none;
+	border: none;
+	width: 50px;
+	height: 50px;
+	font-size: 25px;
+	border-radius: 5px;
+	cursor: pointer;
+	color: #2684C7;
+}
+table tr th button{
+	font-size: 20px;
+}
+table tr th input:hover,table tr th button:hover{
+	background: #2684C7;
+	color: #FFF;
+}
+table tr th input:active,table tr th button:active{
+	background: #000;
+}
